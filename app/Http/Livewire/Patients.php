@@ -7,9 +7,9 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 use Livewire\Component;
 
-class AddPatient extends Component
+class Patients extends Component
 {
-//    public Patient $patient;
+    //    public Patient $patient;
     public $patients;
     public string $name;
     public string $age;
@@ -19,11 +19,6 @@ class AddPatient extends Component
         'location' => 'required|string',
         'age'      => 'required|numeric'
 
-    ];
-    protected $messages = [
-        'name.required'     => 'Name is required',
-        'location.required' => 'Location is required',
-        'age.required'      => 'Age is required',
     ];
 
     public function mount(): void
@@ -51,6 +46,6 @@ class AddPatient extends Component
 
     public function render()
     {
-        return view('livewire.add-patient');
+        return view('livewire.patients');
     }
 }

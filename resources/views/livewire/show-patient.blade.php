@@ -1,4 +1,6 @@
 <div>
+    <h1 class="display-6 mt-3 mb-3 text-center fw-bold">Edit patient</h1>
+    {{$patient}}
     <form wire:submit.prevent="save">
         <div class="row">
             <div class="col">
@@ -22,31 +24,10 @@
             </div>
         </div>
 
-
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-
-    <table class="table table-bordered table-striped">
-        <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <th scope="col">Age</th>
-            <th scope="col">Location</th>
-        </tr>
-        </thead>
-        <tbody>
-        @foreach($patients as $key => $patient)
-            <tr>
-                <th>{{$key+1}}</th>
-                <td>{{($patient)->name}}</td>
-                <td>{{$patient->age}}</td>
-                <td>{{$patient->location}}</td>
-            </tr>
-        @endforeach
-
-
-        </tbody>
-    </table>
-
 </div>
+
+
+
+
