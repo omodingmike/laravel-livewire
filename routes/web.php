@@ -17,6 +17,11 @@ Route::get('/', function () {
     return view('home');
 });
 
+//Route::get('/', function () {
+//    return redirect('patients');
+//});
+//Route::resource('/patients', Patients::class);
+
 
 //Route::get('/patients', function () {
 //    return view('all-patients');
