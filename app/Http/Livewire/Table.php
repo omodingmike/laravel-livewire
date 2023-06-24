@@ -16,6 +16,11 @@ class Table extends Component
         'age'      => 'required|numeric'
 
     ];
+    protected $messages = [
+        'name.required'     => 'Name is required',
+        'location.required' => 'Location is required',
+        'age.required'      => 'Age is required',
+    ];
     protected $listeners = [
         'deletePatientListener' => 'delete',
         'patientsChanged'       => '$refresh'
